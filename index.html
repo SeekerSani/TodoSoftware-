@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+function deleteAllTasks() {
+    if (tasks.length === 0) {
+        alert("There are no tasks to delete.");
+        return;
+    }
+
+    if (confirm("Are you sure you want to delete all tasks?")) {
+        tasks = [];
+        localStorage.removeItem("todoTasks");
+        renderTasks();
+    }
+}<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
